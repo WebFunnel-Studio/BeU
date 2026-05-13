@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZTPEMQ3K4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZTPEMQ3K4');
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>BeU Dance Academy | Move with Passion</title>
+  <link rel="icon" href="./images/Logo/beu logo.jpg"/>
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="./Beu.css" />
+</head>
+
+<body>
+<nav id="navbar">
+  <a href="index.html" class="logo-container" aria-label="Go to homepage">
+    <img src="./images/Logo/beu logo.jpg" alt="BeU Dance Academy Logo" class="nav-logo">
+  </a>
+
+  <button
+    class="mobile-nav-toggle"
+    id="mobile-menu-btn"
+    type="button"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+    aria-controls="nav-menu"
+  >
+    <span class="hamburger"></span>
+  </button>
+
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="program.html">Program</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="price.html">Packages</a></li>
+
+    <li class="nav-dropdown">
+      <button class="dropdown-toggle" type="button">
+        More <span>▾</span>
+      </button>
+
+      <ul class="dropdown-menu">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#why">Benefits</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </li>
+
+    <li><a href="index.html#contact" class="nav-contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="menu-overlay" id="menu-overlay"></div>
+
+  <section class="hero">
+    <div class="container hero-content" data-aos="fade-up" data-aos-duration="1200">
+      <h1 class="hero-title">Welcome to BeU!</h1>
+      <p class="hero-subtitle">Your Stage, Your Steps, Yourself</p>
+      <div class="hero-btn">
+        <a href="#contact" class="btn-pill">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title-alt">Our Vision</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3 class="content-heading">Experience the Journey</h3>
+          <p>
+            At BeU Dance Academy, we provide a structured yet nurturing
+            environment. From first to big stages, we grow together. perfect
+            for beginners & performers
+          </p>
+        </div>
+        <div class="about-visual">
+          <div class="studio-frame">
+            <img src="./images/Tutor-Pics/Our_Vision.webp" alt="BeU Studio" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="locations">
+  <div class="container" data-aos="fade-up">
+
+    <h2 class="section-title-alt">Our Studio Locations</h2>
+    <p class="section-sub">
+      BeU Academy brings classes to multiple partner studios, so students can choose a location that suits them best.
+    </p>
+    <div class="location-grid">
+
+      <div class="location-card">
+        <div class="logo-box">
+          <img src="./images/Logo/Rename-Studio-Logo.PNG">
+        </div>
+        <div class="location-info">
+          <h3>Rename Studio</h3>
+          <p>Cheras</p>
+          <button onclick="openGallery('cheras')" class="gallery-btn">View Studio</button>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="logo-box">
+          <img src="./images/Logo/Rename-Studio-Logo.PNG">
+        </div>
+        <div class="location-info">
+          <h3>Rename Studio</h3>
+          <p>Setapak</p>
+          <button onclick="openGallery('setapak')" class="gallery-btn">View Studio</button>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <div class="logo-box">
+          <img src="./images/Logo/Empty-Space-Logo.png">
+        </div>
+        <div class="location-info">
+          <h3>Empty Space</h3>
+          <p>Puchong</p>
+          <button onclick="openGallery('puchong')" class="gallery-btn">View Studio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gallery-modal" id="galleryModal">
+  <button class="close-gallery" onclick="closeGallery()">×</button>
+  <div class="gallery-box">
+    <h3 id="galleryTitle"></h3>
+    <div class="gallery-images" id="galleryImages"></div>
+  </div>
+</div>
+
+  <section class="collaborations-section">
+    <div class="collaborations-container">
+      <h2 class="section-title">Our Collaborations</h2>
+
+      <p class="collaborations-description">
+        We’re proud to support and collaborate with early education providers across our community.
+      </p>
+
+      <div class="logo-marquee">
+        <div class="logo-track" id="logo-track"></div>
+      </div>
+
+      <p class="trusted-text">
+        Trusted by preschools & early learning centres
+      </p>
+    </div>
+  </section>
+
+  <section class="program-highlight" data-aos="fade-up">
+  <div class="program-card">
+    <div class="program-content">
+      <span class="program-label">Signature Programme</span>
+
+      <h2>BeU FOUR-M KPOP Dance Programme</h2>
+
+      <p>
+        A fun preschool dance programme for children aged 3–6, helping them build
+        confidence, rhythm, movement skills, creativity, and self-expression.
+      </p>
+
+      <div class="program-features">
+
+      <div>
+        Musicality
+      </div>
+
+      <div>
+        Movement
+      </div>
+
+      <div>
+        Maturity
+      </div>
+
+      <div>
+        Moment
+      </div>
+
+      </div>
+
+      <a href="program.html" class="program-btn">
+        View Programme Details
+        <span>→</span>
+      </a>
+    </div>
+
+    <div class="program-visual">
+      <div class="circle big">KPOP</div>
+      <div class="circle small">Ages 3–6</div>
+      <div class="circle mid">FOUR-M</div>
+    </div>
+  </div>
+</section>
+
+  <section id="why" class="benefits-luxury">
+  <div class="container" data-aos="fade-up">
+
+    <h2 class="section-title-alt">
+      The BeU Experience
+    </h2>
+
+    <div class="luxury-accordion">
+
+      <!-- ITEM 1 -->
+      <div class="lux-item">
+        <button class="lux-header">
+          <span class="lux-number">01</span>
+          <h3>
+            Adult Class
+            <small>(Beginner Friendly)</small>
+          </h3>
+          <span class="lux-icon"></span>
+        </button>
+        <div class="lux-content">
+          <div class="lux-inner">
+            <p class="lux-tagline">
+              Dance is meant to be fun - not intimidating.
+            </p>
+            <ul class="lux-list">
+              <li>No dance background required</li>
+              <li>No stress, no harsh pushing</li>
+              <li>Learn at a comfortable and supportive pace</li>
+              <li>Focus on enjoyment, confidence, and steady improvement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="lux-item">
+        <button class="lux-header">
+          <span class="lux-number">02</span>
+          <h3>
+            Preschoolers
+            <small> (Ages 3-6) </small>
+          </h3>
+          <span class="lux-icon"></span>
+        </button>
+        <div class="lux-content">
+          <div class="lux-inner">
+            <p class="lux-tagline">
+              A welcoming environment where every student feels encouraged.
+            </p>
+            <ul class="lux-list">
+              <li>Designed as an introdutory dance and music class</li>
+              <li>Encourages interest in music and movement from a young age</li>
+              <li>Develops coordination, rhythm, listening skills and confidence</li>
+              <li>Fun, playeful, and age-appropriate learning environment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3 -->
+      <div class="lux-item">
+        <button class="lux-header">
+          <span class="lux-number">03</span>
+          <h3>
+            Junior Classes
+            <small>(Ages 7+)</small>
+          </h3>
+          <span class="lux-icon"></span>
+        </button>
+        <div class="lux-content">
+          <div class="lux-inner">
+            <p class="lux-tagline">
+              We believe strong basics lead to lasting growth.
+            </p>
+
+            <ul class="lux-list">
+              <li>Strong emphasis on foundation training and basic techniques</li>
+              <li>Focus on body control, musicality, and coordination</li>
+              <li><Strong>Specialized Training:</Strong> Competition, performance training, and targeted skills development</li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+</section>
+
+  <section id="faq" class="faq-section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title-alt">Frequently Asked Questions</h2>
+
+      <div class="luxury-accordion">
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q1</span>
+            <h3>What age groups do you accept?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>We welcome students from <strong>3 years old to adults</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q2</span>
+            <h3>Do I need dance experience to join?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>
+                No experience needed. We cater to all levels including
+                <strong>beginners, intermediate, and advanced</strong> dancers.
+                Our adult classes are specifically designed to be stress-free
+                and beginner-friendly.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q3</span>
+            <h3>What should I wear to class?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>
+                Wear <strong>comfortable clothes</strong> such as leggings,
+                joggers, or athletic wear, and <strong>covered sports shoes</strong>.
+                Do not forget to bring a water bottle.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q4</span>
+            <h3>Can I switch styles using my package?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>
+                Yes. Our <strong>Flexi Packages</strong> (Credit Packages) allow
+                you to switch between different dance styles so you can explore
+                everything we offer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q5</span>
+            <h3>Do you prepare students for competitions?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>
+                Yes. We provide dedicated <strong>performance training, stage
+                exposure, and competition coaching</strong> for students looking
+                to take their dancing to the next level.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lux-item">
+          <button class="lux-header" type="button">
+            <span class="lux-number">Q6</span>
+            <h3>Are trial classes available?</h3>
+            <div class="lux-icon"></div>
+          </button>
+          <div class="lux-content">
+            <div class="lux-inner">
+              <p>
+                Yes. <strong>Trial classes are available</strong> based on our
+                current schedule. Please contact us to find a slot that fits you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title-alt">Start Your Journey</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 class="content-heading">Get in Touch</h3>
+          <p class="contact-note">Tap a card to copy details instantly.</p>
+
+          <div class="contact-card copy-trigger" data-copy="01118989960">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <span>Phone Number</span>
+              <strong>+60 11-1898 9960</strong>
+            </div>
+            <div class="copy-badge">Tap to Copy</div>
+          </div>
+
+          <div class="contact-card copy-trigger" data-copy="dancewith.beu@gmail.com">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <span>Email Address</span>
+              <strong>dancewith.beu@gmail.com</strong>
+            </div>
+            <div class="copy-badge">Tap to Copy</div>
+          </div>
+        </div>
+        <div class="whatsapp-scan-wrap">
+          <h3 class="content-heading qr-title">Scan to WhatsApp</h3>
+          <div class="qr-code-box">
+            <img src="./images/beu-whatsappqr.jpg" alt="Scan to Chat" class="qr-image" />
+          </div>
+          <p class="qr-note">Scan with your camera</p>
+          <a
+            href="https://wa.me/601118989960"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-pill whatsapp-btn"
+          >
+            Open WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+          PREMIUM FOOTER
+  ========================= -->
+
+  <footer class="premium-footer">
+    <div class="footer-container">
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <h2>
+          BeU Academy
+        </h2>
+        <p>
+          Inspiring confidence, creativity, and expression through
+          professional dance education for all ages and skill levels.
+        </p>
+
+        <!-- SOCIALS -->
+        <div class="footer-socials">
+
+          <!-- INSTAGRAM -->
+          <a
+            href="https://www.instagram.com/beu.dance?igsh=c2NrdDNicGNia2F6"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <!-- REDNOTE -->
+          <a
+            href="https://xhslink.com/m/7tr07X9jBin"
+            target="_blank"
+            aria-label="Rednote"
+          >
+            <i class="fa-solid fa-book-open"></i>
+          </a>
+
+          <!-- WHATSAPP -->
+          <a
+            href="https://wa.me/601118989960"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="footer-column">
+        <h3>
+          Quick Links
+        </h3>
+        <a href="index.html">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </a>
+        <a href="index.html#about">
+          <i class="fa-solid fa-circle-info"></i>
+          About
+        </a>
+        <a href="program.html">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          Programs
+        </a>
+
+        <a href="team.html">
+          <i class="fa-solid fa-user-group"></i>
+          Instructors
+        </a>
+        <a href="index.html#locations">
+          <i class="fa-solid fa-location-dot"></i>
+          Locations
+        </a>
+        <a href="index.html#faq">
+          <i class="fa-solid fa-circle-question"></i>
+          FAQ
+        </a>
+        <a href="index.html#contact">
+          <i class="fa-solid fa-envelope"></i>
+          Contact
+        </a>
+      </div>
+
+      <!-- PROGRAMS -->
+      <div class="footer-column">
+        <h3>
+          Programs
+        </h3>
+        <a href="#programs">
+          K-Pop Dance
+        </a>
+        <a href="#programs">
+          Hip Hop
+        </a>
+        <a href="#programs">
+          Kids Dance
+        </a>
+        <a href="#programs">
+          Beginner Classes
+        </a>
+        <a href="#programs">
+          Performance Team
+        </a>
+      </div>
+
+
+      <!-- CONTACT -->
+      <div class="footer-column">
+
+        <h3>
+          <i class="fa-solid fa-address-book"></i>
+          Contact
+        </h3>
+
+        <a href="tel:+601118989960">
+          <i class="fa-solid fa-phone"></i>
+          +60 11-18989960
+        </a>
+
+        <a href="mailto:dancewith.beu@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          <span>dancewith.beu@gmail.com</span>
+        </a>
+
+        <a
+          href="https://wa.me/+601118989960"
+          target="_blank"
+        >
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+
+      <p>
+        <i class="fa-regular fa-copyright"></i>
+        2026 BeU Academy. All Rights Reserved.
+      </p>
+
+      <div class="footer-bottom-links">
+
+        <a href="#">
+          <i class="fa-solid fa-shield-halved"></i>
+          Privacy Policy
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-file-contract"></i>
+          Terms & Conditions
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./Beu.js" defer></script>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        history.replaceState(null, "", window.location.pathname);
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
